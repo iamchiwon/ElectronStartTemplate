@@ -1,0 +1,32 @@
+<!-- index.html -->
+<!doctype html>
+<html>
+<head>
+    <title>PingPong</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+<div>
+    <h1>PingPong</h1>
+    <button onclick="onPing()">PING</button>
+    <h3 id="result"></h3>
+</div>
+</body>
+
+<script>
+  const electron = require('electron');
+  const { ipcRenderer } = electron;
+  
+  function onPing() {
+    ipcRenderer.send('ping')
+  }
+
+  ipcRenderer.on("pong", (event) => {
+    document.querySelector('#result').innerHTML = `PONG`;
+  });
+</script>
+
+</html>
