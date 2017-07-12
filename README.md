@@ -1,17 +1,28 @@
 # Electron start template
 
-### template1
+## Template1
 - init / run
 - ipc communication
 
-### template2
+#### create
+```bash
+npm init
+npm install --save electron
+```
+
+#### run
+```bash
+npm run electron
+```
+
+## Template2
 - menu bar
 
-### template3
+## Template3
 - tray
 
-### template4
+## Template4
 - multi document window
 
-### template5
+## Template5
 - react / redux
